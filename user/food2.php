@@ -55,7 +55,7 @@ $id=$_GET["id"];
 		echo '<center><table width=100% border=0>';
 		echo '<tr>';
 
-		while($row=mysql_fetch_array($result))
+		if($row=mysql_fetch_array($result))
 		{
 			echo '<center>
 			<table width=30% border=0>';
@@ -76,8 +76,6 @@ $id=$_GET["id"];
             echo '<tr>
             <td align=right>電話：</td>
             <td align=left>'.$row[5].'</td>';
-            echo '</table>';
-
 		}
 
 		
