@@ -25,15 +25,10 @@
 <body>
 
 
-<?php
 
-$id=$_GET["id"];
-
-
-?>
 
 <?php
-
+    $id=$_GET["id"];
 
 	//連接資料庫
 
@@ -77,7 +72,10 @@ $id=$_GET["id"];
             <td align=right>電話：</td>
             <td align=left>'.$row[5].'</td>';
 		}
-
+        if($id!=NULL){
+            echo '<tr>
+            <>'
+        }
 		
 		echo "</table>";
 

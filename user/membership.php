@@ -2,9 +2,9 @@
 <html>
     <head>
         <title>會員登入/註冊</title>
-        <link rel="stylesheet" href="css/membership.css">
+        <link rel="stylesheet" href="../css/membership.css">
     </head>
-    <script src="js/membership.js"></script>
+    <script src="../js/membership.js"></script>
     <style>
         body{
             background-color: #CAD8D8;
