@@ -28,6 +28,10 @@
         background-color: #ECECFF;
         text-align: center;
     }
+    .list2 tr td a{
+        color:black;
+        text-decoration:none;
+    }
 </style>
 <body>
 
@@ -44,10 +48,10 @@
     </table>
     <table class="list2">
         <tr>
-            <td><a href="main.php">首頁</a><td>
-            <td><button class="member">登入</button></td>
+            <td><a href="main.php" target="main">首頁</a><td>
+            <td><a href="membership.php" target="main">登入</a></button></td>
             <td>|</td>
-            <td><button class="member">註冊</button></td>
+            <td><a href="membership.php" target="main">註冊</a></td>
         </tr>
 
     </table>
