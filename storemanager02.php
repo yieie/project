@@ -59,7 +59,7 @@
             <tr align=center>
             <td><button><a href=storelist.php?account='.$ac.'>您的店家清單</button></td>
             <td><button><a href=storechange.php?account='.$ac.'>管理您的店家</button></td>
-            </tr>';
+            </tr>';// <td><button><a href=storeadd.php?account='.$ac.'>新增您的店家</button></td>
             echo '<input type="hidden" name="account" value='.$ac.'>';
             echo '</form>';
 
