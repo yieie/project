@@ -37,7 +37,7 @@ $id=$_GET["id"];
 
 	//連接資料庫
 
-	include("connection.php");
+	include("../connection.php");
 
 	$select_db = mysql_select_db("travel");//選擇資料庫
 
@@ -60,7 +60,7 @@ $id=$_GET["id"];
 			echo '<center>
 			<table width=30% border=0>';
             echo '<tr>
-            <td colspan=2><center><img src=./picture/food.svg width=80><br>';
+            <td colspan=2><center><img src=../picture/food.svg width=80><br>';
             echo '<tr>
             <td align=right width=25%>店名：</td>
             <td align=left width=25%>'.$row[1].'</td>';

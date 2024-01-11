@@ -36,7 +36,7 @@
 
             // echo $mrt;
 
-            include("connection.php");
+            include("../connection.php");
 
             $select_db=@mysql_select_db("travel");
         
@@ -56,7 +56,7 @@
                         if($cnt%5==1 && $cnt>5){
                             echo '<tr>';
                         }
-                            echo '<td width=20%><center><img src=./picture/spot.svg width=80><br>';
+                            echo '<td width=20%><center><img src=../picture/spot.svg width=80><br>';
                             echo "<a href=attraction2.php?id=".$row[0].">".$row[0].$row[1]."</a></td>";
                     }
                     echo "</table>";
@@ -79,7 +79,7 @@
                             if($cnt%5==1 && $cnt>5){
                                 echo '<tr>';
                             }
-                                echo '<td width=20%><center><img src=./picture/spot.svg width=80><br>';
+                                echo '<td width=20%><center><img src=../picture/spot.svg width=80><br>';
                                 echo "<a href=attraction2.php?id=".$row0[0]."&mrt=".$mrt.">".$row0[1]."</a>
                                 <p>距離：".$row[3]."m <br>步行時間約：".$row[4]."</td>";
                         }

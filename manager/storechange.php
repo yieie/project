@@ -36,7 +36,7 @@
     //  echo 'account='.$ac;
     // echo '<br>passwd= '.$passwd;
 
-    include("connection.php");
+    include("../connection.php");
 
     $select_db=@mysql_select_db("travel");
 

@@ -11,7 +11,7 @@
     //  echo "usremail=".$usremail;
 
 
-    include("connection.php");
+    include("../connection.php");
 
     $select_db=@mysql_select_db("travel");//進入資料庫
     

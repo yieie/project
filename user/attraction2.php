@@ -24,7 +24,7 @@
     <body>
         <?php
             $id=$_GET["id"];
-            include("connection.php");
+            include("../connection.php");
 
             $select_db=@mysql_select_db("travel");
         
@@ -40,7 +40,7 @@
                     echo '<center>
                     <table width=30% border=0>';
                     echo '<tr>
-                    <td colspan=2><center><img src=./picture/spot.svg width=80><br>';
+                    <td colspan=2><center><img src=../picture/spot.svg width=80><br>';
                     echo '<tr>
                     <td align=right width=25%>店名/景點名：</td>
                     <td align=left width=25%>'.$row[1].'</td>';

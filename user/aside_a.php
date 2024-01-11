@@ -32,7 +32,7 @@
     </style>
     <body>
         <?php
-            include("connection.php");
+            include("../connection.php");
 
             $select_db=@mysql_select_db("travel");
         
