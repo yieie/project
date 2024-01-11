@@ -3,6 +3,11 @@
     <head>
 
     </head>
+    <style>
+        body{
+            background-color: #CAD8D8;
+        }
+    </style>
     <body>
     <?php
     $ac=$_GET["account"];
@@ -26,11 +31,12 @@
         $result=mysql_query($sql_query);//result是一個矩陣，所有資料的矩陣
 
         if(mysql_num_rows($result)){
-            // echo '歡迎光臨';
-            // $row=mysql_fetch_array($result);
-            // echo '<br>account:'.$row[0];
-            // echo '<br>不存在此帳號<br>';
-            // echo '<a href="main.php">點此回上頁註冊或以訪客模式瀏覽</a>';
+            $row=mysql_fetch_array($result);
+            echo '<form method=get action="home.php">';
+            echo '<h1><center>'.$row[1].'，歡迎光臨</h1>';
+            echo '<br><br><h1><center><a href="">';
+            echo '<input type=hidden value='.$ac.'>';
+            echo '</form>';
         }
         else{
             echo '帳號不存在';

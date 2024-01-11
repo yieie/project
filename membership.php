@@ -7,7 +7,7 @@
     <script src="js/membership.js"></script>
     <style>
         body{
-            background-color: #ECECFF;
+            background-color: #CAD8D8;
         }
     </style>
     <body>
