@@ -13,13 +13,13 @@
     </style>
     <script>
         function guest(){
-            location.href='guest.php';
+            location.href='./user/guest.php';
         }
         function membership(){
-            location.href='membership.php';
+            location.href='./user/membership.php';
         }
         function storemanager(){
-            location.href='storemanager.php';
+            location.href='./user/storemanager.php';
         }
     </script>
     <body >
