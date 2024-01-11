@@ -6,6 +6,11 @@
         <title>Metrovel</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
+    <style>
+        body{
+            background-color: #CAD8D8;
+        }
+    </style>
     <script>
         function guest(){
             location.href='guest.php';
