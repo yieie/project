@@ -1,0 +1,11 @@
+#intro .jumbotron{
+    height: 70vh;
+}
+
+header nav img{
+    width: 200px;
+}
+
+body{
+    background-color: #ECECFF;
+}
