@@ -5,6 +5,11 @@
         <link rel="stylesheet" href="css/membership.css">
     </head>
     <script src="js/membership.js"></script>
+    <style>
+        body{
+            background-color: #ECECFF;
+        }
+    </style>
     <body>
         <center>
         <table border="0" width="50%">

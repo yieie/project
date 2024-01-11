@@ -3,6 +3,11 @@
     <head>
         <title>店家管理</title>
     </head>
+    <style>
+        body{
+            background-color: #ECECFF;
+        }
+    </style>
     <body>
         <center>
         <form method="get" action="login.php"  id="login">
