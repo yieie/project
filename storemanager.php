@@ -5,12 +5,12 @@
     </head>
     <style>
         body{
-            background-color: #ECECFF;
+            background-color: #CAD8D8;
         }
     </style>
     <body>
         <center>
-        <form method="get" action="login.php"  id="login">
+        <form method="get" action="storemanager02.php"  id="storemanager">
             <table>
                 <tr><td colspan="2" align="center"><h1>店家登入</h1></td></tr>
                 <tr><td colspan="2">&nbsp</td></tr>

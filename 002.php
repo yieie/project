@@ -5,7 +5,7 @@
 </head>
 <frameset rows="10%,90%" border=0>
                 <frame name="header" scrolling="no" noresize target="main" src="header.php" >
-                <frame name="main" src="main.php">
+                <frame name="main" src="home.php">
                 <noframes>
                 </noframes>
 

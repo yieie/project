@@ -10,8 +10,7 @@
 </script>
 <style>
     body{
-        background-color: #ECECFF;
-       /* #a582c3;  */
+        background-color:#9BC0CC ;
     }
     .list1{
         display: none;
@@ -48,7 +47,7 @@
     </table>
     <table class="list2">
         <tr>
-            <td><a href="main.php" target="main">首頁</a><td>
+            <td><a href="home.php" target="main">首頁</a><td>
             <td><a href="membership.php" target="main">登入</a></button></td>
             <td>|</td>
             <td><a href="membership.php" target="main">註冊</a></td>
