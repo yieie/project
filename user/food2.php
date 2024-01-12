@@ -1,5 +1,7 @@
 <!DOCKTYPE html>
-
+<?php
+session_start();//宣告session之前不可以有html的字串輸出
+?>
 <html>
 <head>
 </head>
@@ -29,6 +31,7 @@
 
 <?php
     $id=$_GET["id"];
+    $ac=$_SESSION["account"];
 
 	//連接資料庫
 
@@ -46,10 +49,11 @@
 
 		$sql_query = "select * from attractionandfood where aid='".$id."' ";//下sql語法
 		$result=mysql_query($sql_query);//執行sql語法，執行完會丟到result
+        
         echo '<form method=get action=collect.php>';
 		echo '<center><table width=100% border=0>';
 		echo '<tr>';
-
+        
 		if($row=mysql_fetch_array($result))
 		{
 			echo '<center>
@@ -72,19 +76,20 @@
             <td align=right>電話：</td>
             <td align=left>'.$row[5].'</td>';
 		}
-        echo '<tr>
-        <td align=right>帳號：</td>
-        <td align=left><input type=text name=account></td>';
-        echo '<input type=hidden name=aid value='.$row[0].'>';
-        echo '<tr align=center>
-        <td colspan=2><input type=submit value="收藏"></td>';
-        // if($id!=NULL){
-        //     echo '<tr>
-        //     <>'
-        // }
+        // echo '<tr>
+        // <td align=right>帳號：</td>
+        // <td align=left><input type=text name=account></td>';
+        
+        if($ac!=NULL){
+            echo '<input type=hidden name=aid value='.$row[0].'>';
+            echo '<tr align=center>
+            <td colspan=2><input type=submit value="收藏"></td>';
+            
+        }
 		
 		echo "</table>";
         echo "</form>";
+        
 
 			
 

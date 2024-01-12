@@ -1,16 +1,20 @@
 <!DOCTYPE html>
+<?php
+session_start();
+$ac=$_SESSION["account"];
+?>
 <html>
     <head>
-        <title>Metrovel</title>
     </head>
     <style>
-        body{
-            background-color: #CAD8D8;
-        }
+    
+    body{
+        background-color:#CAD8D8 ;
+    }
 
         button{
-            height:50px;
-            width:100px;
+            height:30px;
+            width:200px;
             border-radius:5px;
         }
 
@@ -20,25 +24,30 @@
         .odd{
             background-color:#CAD8D8;
         }
+        a{
+            background-color:#D0CE9F;
+            text-decoration:none;
+            color:black;
+        }
+        a:hover{
+            background-color:black;
+            color:#D0CE9F;
+        }
     </style>
     <body>
         <?php
-            session_start();
-            $id=$_GET["id"];
-            $ac=$_SESSION['account'];
+            $id=$_GET['id'];
             include("../connection.php");
-
-            $select_db=@mysql_select_db("travel");
-        
-            if(!$select_db)
-            {
-                echo '<br>找不到資料庫<br>';
+            // 選擇 travel 資料庫
+            $select_db = mysql_select_db("travel");
+            if (!$select_db) {
+                echo '<br>找不到資料庫!<br>';
             }
-            else{
-                echo '<form method=get action=collect.php>';
+            else {
                 $sql_query="SELECT * FROM `attractionandfood` WHERE aid='".$id."'";
                 $result=mysql_query($sql_query);//result是一個矩陣，所有資料的矩陣
                 if($row=mysql_fetch_array($result)){
+                    echo '<form method=get action=delcollect.php>';
                     echo '<center>
                     <table width=30% border=0>';
                     echo '<tr>
@@ -58,24 +67,13 @@
                     echo '<tr>
                     <td align=right>電話：</td>
                     <td align=left>'.$row[5].'</td>';
-                }
-
-                
-                // echo '<tr>
-                // <td align=right>帳號：</td>
-                // <td align=left><input type=text name=account></td>';
-                // echo '<input type=hidden name=aid value='.$row[0].'>';
-                // echo '<tr align=center>
-                // <td colspan=2><input type=submit value="收藏"></td>';
-                if($ac!=NULL){
-                    echo '<input type=hidden name=aid value='.$row[0].'>';
-                    echo '<tr align=center>
-                    <td colspan=2><input type=submit value="收藏"></td>';
+                    echo '<tr>
+                    <td colspan=2 align=center><input type=submit value="取消收藏">';
+                    echo "</table>";
+                    echo " <input type=hidden value=".$id." name=id>
+                    </form>";
                 }
                 
-                echo "</table>";
-                echo "</form>";
-            
             }
         ?>
     </body>

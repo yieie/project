@@ -1,5 +1,7 @@
 <!DOCKTYPE html>
-
+<?php
+session_start();//宣告session之前不可以有html的字串輸出
+?>
 <html>
 <head>
 </head>
@@ -33,7 +35,7 @@
     </style>
 <body>
 <?php
-    $ac=$_GET['account'];
+    $ac=$_SESSION['account'];
     $aid=$_GET["aid"];
     // echo $ac;
     // echo $aid;

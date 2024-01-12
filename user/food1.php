@@ -58,7 +58,7 @@
                     echo '<tr>';
                 }
                 echo '<td width=20%><center><img src=../picture/food.svg width=80><br>';
-                echo '<a href=food2.php?id='.$row[0].' target="main" >'.$row[1].'</a>';
+                echo '<a href=food2.php?id='.$row[0].' target="right" >'.$row[1].'</a>';
             }
             echo "</table>";
         }
@@ -82,7 +82,7 @@
                         echo '<tr>';
                     }
                         echo '<td width=20%><center><img src=../picture/spot.svg width=80><br>';
-                        echo "<a href=attraction2.php?id=".$row0[0].">".$row0[1]."</a>
+                        echo "<a href=food2.php?id=".$row0[0]." target='right'>".$row0[1]."</a>
                         <p>距離：".$row[3]."m <br>步行時間約：".$row[4]."</td>";
                 }
                 
