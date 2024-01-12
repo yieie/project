@@ -2,12 +2,31 @@
 <html>
     <head>
         <title>會員登入/註冊</title>
-        <link rel="stylesheet" href="../css/membership.css">
     </head>
-    <script src="../js/membership.js"></script>
+    <script src="../js/membership.js">
+        function display(id){
+            document.getElementById('login').style.display="none";
+            document.getElementById('register').style.display="none";
+            document.getElementById(id).style.display="block";
+        }
+    </script>
     <style>
         body{
             background-color: #CAD8D8;
+        }
+        #login{
+            border: 0;
+            display: none;
+            padding-top: 100px;
+        }
+        #register{
+            border: 0;
+            display: none;
+            padding-top:100px;
+        }
+        button{
+            width: 100px;
+            height: 50px;
         }
     </style>
     <body>
