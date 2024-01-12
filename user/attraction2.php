@@ -33,7 +33,7 @@
                 echo '<br>找不到資料庫<br>';
             }
             else{
-
+                echo '<form method=get action=collect.php>';
                 $sql_query="SELECT * FROM `attractionandfood` WHERE aid='".$id."'";
                 $result=mysql_query($sql_query);//result是一個矩陣，所有資料的矩陣
                 if($row=mysql_fetch_array($result)){
@@ -56,8 +56,22 @@
                     echo '<tr>
                     <td align=right>電話：</td>
                     <td align=left>'.$row[5].'</td>';
-                    echo '</table>';
                 }
+
+                
+                echo '<tr>
+                <td align=right>帳號：</td>
+                <td align=left><input type=text name=account></td>';
+                echo '<input type=hidden name=aid value='.$row[0].'>';
+                echo '<tr align=center>
+                <td colspan=2><input type=submit value="收藏"></td>';
+                // if($id!=NULL){
+                //     echo '<tr>
+                //     <>'
+                // }
+                
+                echo "</table>";
+                echo "</form>";
             
             }
         ?>

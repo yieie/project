@@ -57,7 +57,7 @@
                             echo '<tr>';
                         }
                             echo '<td width=20%><center><img src=../picture/spot.svg width=80><br>';
-                            echo "<a href=attraction2.php?id=".$row[0].">".$row[0].$row[1]."</a></td>";
+                            echo "<a href=attraction2.php?id=".$row[0].">".$row[1]."</a></td>";
                     }
                     echo "</table>";
                 }

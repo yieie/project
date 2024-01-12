@@ -3,7 +3,20 @@
     <head>
         <title>會員註冊</title>
     </head>
-
+    <style>
+        body{
+            background-color: #CAD8D8;
+        }
+        a{
+            background-color:#D0CE9F;
+            text-decoration:none;
+            color:black;
+        }
+        a:hover{
+            background-color:black;
+            color:#D0CE9F;
+        }
+    </style>
     <body>
     <?php
         $usraccount=$_GET["account"];

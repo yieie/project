@@ -31,7 +31,10 @@
     }
 </style>
 <body>
-
+    <?php
+    $ac=$_GET['account'];
+    //echo 'account:'.$ac;
+    ?>
     <table class="list1">
         <tr>
             <td><img src='picture/logo.png'></td>

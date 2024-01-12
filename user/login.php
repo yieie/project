@@ -42,7 +42,7 @@
         if(mysql_num_rows($result)){
             $row=mysql_fetch_array($result);
             echo '<h1><center>'.$row[1].'，歡迎光臨</h1>';
-            echo '<br><br><h1><center><a href=home.php?account='.$ac.'>點此回首頁</a></h1>';
+            echo '<br><br><h1><center><a href=../home.php?account='.$ac.'>點此回首頁</a></h1>';
         }
         else{
             echo '帳號不存在';
